@@ -1,59 +1,52 @@
-# ProjetoPA
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
 
-## Development server
+Número da Lista: 31<br>
+Conteúdo da Disciplina: Dividir e Conquistar<br>
 
-To start a local development server, run:
+## Alunos
+
+|Matrícula|Aluno|Github|
+|---------|----|---------|
+|211031566|Ana Joyce|[anajoyceamorim](https://github.com/anajoyceamorim)|
+|211031860|Victório Lázaro| [Victor-oss](https://github.com/Victor-oss)|
+
+## Sobre 
+Nesse projeto, o usuário seleciona uma lista de no mínimo 5 e no máximo 10 livros usando a api do Google para livros. Em seguida, aparecem dois rankings para o usuário rankear os livros como quiser e comparar com um outro ranking. Usando o algoritmo de Contagem de Inversões, a aplicação retorna a similaridade e diferenças dos rankings.
+
+## Instalação 
+Linguagem: Typescript<br>
+Framework: Angular<br>
+
+## Dependências
+
+Este projeto foi desenvolvido com as seguintes tecnologias:
+- **Node.js** (recomendado `v22.x` ou versão compatível)
+- **Angular CLI** versão `21.x`
+
+## Instalando dependências
+
+Antes de executar o projeto, instale as dependências do repositório (como o Angular, Leaflet, etc.) rodando o comando abaixo na raiz do projeto:
 
 ```bash
-ng serve
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Build
 
-## Code scaffolding
+Rode o comando abaixo para buildar o projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Rodar o projeto
 
-## Running unit tests
+Rode o comando abaixo para rodar o projeto
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```
+`ng serve` 
 ```
 
-## Running end-to-end tests
+Siga para [http://localhost:4200/](http://localhost:4200/) para ver a aplicação rodando
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Screenshots
