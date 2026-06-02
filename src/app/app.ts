@@ -2,10 +2,11 @@ import { Component, signal, inject, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BookService } from './services/book.service';
 import { Book } from './models/book.model';
+import { RankingResultComponent } from './components/ranking/ranking-result.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule],
+  imports: [FormsModule, RankingResultComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -19,6 +20,7 @@ export class App {
   protected readonly showRankings = signal(false);
   protected readonly rankingA = signal<Book[]>([]);
   protected readonly rankingB = signal<Book[]>([]);
+  protected readonly showResult = signal(false);
 
   protected readonly canAddMoreBooks = computed(() => this.books().length < 10);
   protected readonly canShowRankingButton = computed(() => this.books().length > 5);
@@ -71,6 +73,15 @@ export class App {
 
   voltarParaBusca(): void {
     this.showRankings.set(false);
+    this.showResult.set(false);
+  }
+
+  verificarMatch(): void {
+    this.showResult.set(true);
+  }
+
+  voltarParaRankings(): void {
+    this.showResult.set(false);
   }
 
   onDragStart(index: number): void {

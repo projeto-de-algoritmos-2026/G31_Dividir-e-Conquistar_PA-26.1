@@ -292,3 +292,27 @@ h2 {
 .drag-handle:active {
   cursor: grabbing;
 }
+
+.match-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #ff9a8b 0%, #ff6a88 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.match-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 106, 136, 0.4);
+}
+
+.back-btn-result {
+  margin-top: 2rem;
+}

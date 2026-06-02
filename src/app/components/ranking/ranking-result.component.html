@@ -1,0 +1,12 @@
+<div class="result-container">
+  <h3>Resultados do Ranking</h3>
+  <p>Inversões no Ranking A: {{ inversionsA }}</p>
+  <p>Inversões no Ranking B: {{ inversionsB }}</p>
+  <p
+    class="match-message"
+    [class.match]="inversionsA === inversionsB"
+    [class.no-match]="inversionsA !== inversionsB"
+  >
+    {{ matchMessage }}
+  </p>
+</div>

@@ -50,3 +50,11 @@ Rode o comando abaixo para rodar o projeto
 Siga para [http://localhost:4200/](http://localhost:4200/) para ver a aplicação rodando
 
 ## Screenshots
+![sequencia1](src/assets/imagens/sequencia1.png)
+![sequencia2](src/assets/imagens/sequencia2.png)
+![sequencia3](src/assets/imagens/sequencia3.png)
+![sequencia4](src/assets/imagens/sequencia4.png)
+
+## Vídeo  
+[![Dividir e Conquistar](https://img.youtube.com/vi/ZJKBtokJ58g/0.jpg)](https://www.youtube.com/watch?v=ZJKBtokJ58g)
+

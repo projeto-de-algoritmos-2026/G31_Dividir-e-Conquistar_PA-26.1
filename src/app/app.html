@@ -49,51 +49,59 @@
     </section>
   } @else {
     <section class="rankings-section">
-      <button class="back-btn" (click)="voltarParaBusca()">← Voltar</button>
+      <button class="back-btn" (click)="voltarParaBusca()">← Voltar para Busca</button>
 
-      <div class="rankings-container">
-        <div class="ranking">
-          <h2>Ranking A</h2>
-          <p class="ranking-hint">Arraste para reordenar</p>
-          <div class="ranking-list">
-            @for (book of rankingA(); track book.id; let i = $index) {
-              <div
-                class="ranking-item"
-                draggable="true"
-                (dragstart)="onDragStart(i)"
-                (dragover)="onDragOver($event)"
-                (drop)="onDropRankingA($event, i)"
-              >
-                <span class="position">{{ i + 1 }}º</span>
-                <img [src]="book.thumbnail" [alt]="book.title" class="book-thumbnail-small" />
-                <span class="book-title">{{ book.title }}</span>
-                <div class="drag-handle">⠿</div>
-              </div>
-            }
+      @if (showResult()) {
+        <div class="result-section">
+          <app-ranking-result [books]="books()" [rankingA]="rankingA()" [rankingB]="rankingB()" />
+          <button class="back-btn back-btn-result" (click)="voltarParaRankings()">← Voltar para os Rankings</button>
+        </div>
+      } @else {
+        <div class="rankings-container">
+          <div class="ranking">
+            <h2>Ranking A</h2>
+            <p class="ranking-hint">Arraste para reordenar</p>
+            <div class="ranking-list">
+              @for (book of rankingA(); track book.id; let i = $index) {
+                <div
+                  class="ranking-item"
+                  draggable="true"
+                  (dragstart)="onDragStart(i)"
+                  (dragover)="onDragOver($event)"
+                  (drop)="onDropRankingA($event, i)"
+                >
+                  <span class="position">{{ i + 1 }}º</span>
+                  <img [src]="book.thumbnail" [alt]="book.title" class="book-thumbnail-small" />
+                  <span class="book-title">{{ book.title }}</span>
+                  <div class="drag-handle">⠿</div>
+                </div>
+              }
+            </div>
+          </div>
+
+          <div class="ranking">
+            <h2>Ranking B</h2>
+            <p class="ranking-hint">Arraste para reordenar</p>
+            <div class="ranking-list">
+              @for (book of rankingB(); track book.id; let i = $index) {
+                <div
+                  class="ranking-item"
+                  draggable="true"
+                  (dragstart)="onDragStart(i)"
+                  (dragover)="onDragOver($event)"
+                  (drop)="onDropRankingB($event, i)"
+                >
+                  <span class="position">{{ i + 1 }}º</span>
+                  <img [src]="book.thumbnail" [alt]="book.title" class="book-thumbnail-small" />
+                  <span class="book-title">{{ book.title }}</span>
+                  <div class="drag-handle">⠿</div>
+                </div>
+              }
+            </div>
           </div>
         </div>
-
-        <div class="ranking">
-          <h2>Ranking B</h2>
-          <p class="ranking-hint">Arraste para reordenar</p>
-          <div class="ranking-list">
-            @for (book of rankingB(); track book.id; let i = $index) {
-              <div
-                class="ranking-item"
-                draggable="true"
-                (dragstart)="onDragStart(i)"
-                (dragover)="onDragOver($event)"
-                (drop)="onDropRankingB($event, i)"
-              >
-                <span class="position">{{ i + 1 }}º</span>
-                <img [src]="book.thumbnail" [alt]="book.title" class="book-thumbnail-small" />
-                <span class="book-title">{{ book.title }}</span>
-                <div class="drag-handle">⠿</div>
-              </div>
-            }
-          </div>
-        </div>
-      </div>
+        <button class="match-btn" (click)="verificarMatch()">Verificar Match</button>
+      }
     </section>
   }
 </main>

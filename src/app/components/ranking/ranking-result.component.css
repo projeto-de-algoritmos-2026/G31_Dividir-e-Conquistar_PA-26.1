@@ -1,0 +1,38 @@
+.result-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.match-message {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.match-message.match {
+  color: #28a745;
+  background-color: #e9f7ec;
+}
+
+.match-message.no-match {
+  color: #dc3545;
+  background-color: #fbebed;
+}
